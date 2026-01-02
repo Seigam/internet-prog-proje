@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             else {
                 // Unique Dosya Adları 
                 $yeni_ad = "haber-" . uniqid() . "." . $uzanti;
-                $hedef_yol = "../uploads/" . $yeni_ad;
+                $hedef_yol = "../yuklemeler/" . $yeni_ad;
 
                 if (move_uploaded_file($gecici_yol, $hedef_yol)) {
                     $resim_adi = $yeni_ad;
@@ -164,5 +164,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     </form>
 </div>
-
-<?php require_once 'inc/footer.php'; ?>
